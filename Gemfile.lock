@@ -1,0 +1,26 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    blather (0.4.15)
+      eventmachine (>= 0.12.6)
+      nokogiri (>= 1.4.0)
+    eventmachine (0.12.10)
+    git (1.2.5)
+    jeweler (1.5.2)
+      bundler (~> 1.0.0)
+      git (>= 1.2.5)
+      rake
+    nokogiri (1.4.4)
+    rake (0.8.7)
+    rcov (0.9.9)
+    shoulda (2.11.3)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  blather
+  bundler (~> 1.0.0)
+  jeweler (~> 1.5.2)
+  rcov
+  shoulda
