@@ -1,6 +1,6 @@
-= pictor
+= Pictor
 
-Description goes here.
+An XMPP Group Chat image search bot in the spirit of Github's Hubot.
 
 == Contributing to pictor
  

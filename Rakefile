@@ -15,8 +15,7 @@ Jeweler::Tasks.new do |gem|
   gem.name = "pictor"
   gem.homepage = "http://github.com/loe/pictor"
   gem.license = "MIT"
-  gem.summary = %Q{An image bot in the spirit of hubot}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{An XMPP Group Chat image search bot in the spirit of Github's Hubot.}
   gem.email = "andrew@andrewloe.com"
   gem.authors = ["W. Andrew Loe III"]
   # Include your dependencies below. Runtime dependencies are required when using your gem,
