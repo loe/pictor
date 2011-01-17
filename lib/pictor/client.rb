@@ -1,6 +1,7 @@
 require 'blather/client/dsl'
 require 'em-http'
 require 'yajl'
+require 'active_support/core_ext/array'
 
 # Seems like Ejabberd sends back a buggy stanza with the namespace set to "",
 # so register that namespace as a standard Blather::Stanza::Message.
@@ -26,14 +27,18 @@ module Pictor
       end
 
       message :groupchat?, :body => /^Pictor:/ do |m|
-        rxp = Regexp.new('Pictor: (.*)', 'i')
-        query = rxp.match(m.body)[1]
+        if m.from =~ /Brandon/i
+          query = 'unicorn'
+        else
+          rxp = Regexp.new('Pictor: (.*)', 'i').match(m.body)
+          query = rxp[1].blank? ? 'unicorn' : rxp[1]
+        end
         puts "Searching: #{query}"
         http = EventMachine::HttpRequest.new('http://ajax.googleapis.com/ajax/services/search/images').get(:query => {'key' => @key, 'v' => '1.0', 'q' => query}, :timeout => 10)
         http.errback { puts 'Search Failed' }
         http.callback {
           r = Yajl::Parser.parse(http.response)
-          url = r['responseData']['results'].first['unescapedUrl'] + "#.png"
+          url = r['responseData']['results'].sample['unescapedUrl'] + "#.png"
           puts "Returning: #{url}"
           m = Blather::Stanza::Message.new
           m.to = @room
