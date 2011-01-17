@@ -1,7 +1,6 @@
 require 'pictor/client'
 
 module Pictor
-
   def self.run!(*args)
     EM.run do
       p = Pictor::Client.new
