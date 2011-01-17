@@ -27,7 +27,8 @@ Gem::Specification.new do |s|
     "VERSION",
     "bin/pictor",
     "lib/pictor.rb",
-    "lib/pictor/client.rb"
+    "lib/pictor/client.rb",
+    "pictor.gemspec"
   ]
   s.homepage = %q{http://github.com/loe/pictor}
   s.licenses = ["MIT"]

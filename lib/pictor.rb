@@ -1,6 +1,3 @@
-require 'rubygems'
-require 'bundler'
-Bundler.setup
 require 'pictor/client'
 
 module Pictor
