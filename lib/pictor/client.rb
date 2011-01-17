@@ -33,7 +33,7 @@ module Pictor
         http.errback { puts 'Search Failed' }
         http.callback {
           r = Yajl::Parser.parse(http.response)
-          url = r['responseData']['results'].first['url']
+          url = r['responseData']['results'].first['unescapedUrl'] + "#.png"
           puts "Returning: #{url}"
           m = Blather::Stanza::Message.new
           m.to = @room
