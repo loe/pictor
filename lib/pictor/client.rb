@@ -27,7 +27,9 @@ module Pictor
       end
 
       message :groupchat?, :body => /^Pictor:/ do |m|
-        if m.from =~ /Brandon/i
+        puts "From: #{m.from}"
+        if m.from.to_s.match(/Brandon/)
+          puts "Brandon is searching, setting the query to unicorn! HAHAHAHAH"
           query = 'unicorn'
         else
           rxp = Regexp.new('Pictor: (.*)', 'i').match(m.body)
