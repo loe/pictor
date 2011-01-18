@@ -26,8 +26,9 @@ module Pictor
       end
 
       message :groupchat?, :body => /^Pictor:/ do |m|
-        rxp = Regexp.new('Pictor: (.*)', 'i')
-        query = rxp.match(m.body)[1]
+        puts "From: #{m.from}"
+        rxp = Regexp.new('Pictor: (.*)', 'i').match(m.body)
+        query = rxp[1].blank? ? 'unicorn' : rxp[1]
         puts "Searching: #{query}"
         http = EventMachine::HttpRequest.new('http://ajax.googleapis.com/ajax/services/search/images').get(:query => {'key' => @key, 'v' => '1.0', 'q' => query}, :timeout => 10)
         http.errback { puts 'Search Failed' }
