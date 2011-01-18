@@ -1,6 +1,7 @@
 require 'blather/client/dsl'
 require 'em-http'
 require 'yajl'
+require 'active_support/core_ext/array'
 
 # Seems like Ejabberd sends back a buggy stanza with the namespace set to "",
 # so register that namespace as a standard Blather::Stanza::Message.
@@ -34,7 +35,7 @@ module Pictor
         http.errback { puts 'Search Failed' }
         http.callback {
           r = Yajl::Parser.parse(http.response)
-          url = r['responseData']['results'].first['unescapedUrl'] + "#.png"
+          url = r['responseData']['results'].sample['unescapedUrl'] + "#.png"
           puts "Returning: #{url}"
           m = Blather::Stanza::Message.new
           m.to = @room

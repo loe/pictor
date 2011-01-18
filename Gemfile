@@ -3,6 +3,7 @@ source "http://rubygems.org"
 gem "blather"
 gem "em-http-request"
 gem "yajl-ruby"
+gem "activesupport"
 
 group :development do
   gem "bundler", "~> 1.0.0"

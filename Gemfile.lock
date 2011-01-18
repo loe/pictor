@@ -1,6 +1,7 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    activesupport (2.3.10)
     addressable (2.2.2)
     blather (0.4.15)
       eventmachine (>= 0.12.6)
@@ -25,6 +26,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activesupport
   blather
   bundler (~> 1.0.0)
   em-http-request
