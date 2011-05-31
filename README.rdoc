@@ -15,7 +15,6 @@ An XMPP Group Chat image search bot in the spirit of Github's Hubot.
 
 The repository also contains a `Procfile` suitable for running Pictor on [Heroku](http://heroku.com/)'s [Cedar](http://devcenter.heroku.com/articles/cedar) stack.
 
-
 ## Contributing to Pictor
  
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
