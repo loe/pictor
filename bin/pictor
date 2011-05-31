@@ -2,4 +2,6 @@
 $LOAD_PATH.unshift File.join(File.dirname(__FILE__), '..', 'lib')
 require 'pictor'
 
+STDOUT.sync = true
+
 Pictor.run!(*ARGV)
