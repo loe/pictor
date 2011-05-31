@@ -2,7 +2,21 @@
 
 An XMPP Group Chat image search bot in the spirit of Github's Hubot.
 
-== Contributing to pictor
+== Running Pictor
+
+* Using ARGV:
+`$ bundle exec ruby bin/pictor foo@bar.com baz room@conference.host Pictor GoogleImageSearchKey`
+
+* Using ENV:
+`$ export JID=foo@bar.com PASS=baz ROOM=room@conference.host NICK=Pictor Key=GoogleImageSearchKey`
+`$ bundle exec ruby bin/pictor`
+
+* If you have installed Pictor as a RubyGem and have the `bin` directory on your `$PATH` you may simply call `$ pictor ...`
+
+The repository also contains a `Procfile` suitable for running Pictor on [Heroku](http://heroku.com/)'s [Cedar](http://devcenter.heroku.com/articles/cedar) stack.
+
+
+== Contributing to Pictor
  
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
 * Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
