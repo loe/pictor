@@ -12,7 +12,7 @@ An XMPP Group Chat image search bot in the spirit of Github's Hubot.
 `$ bundle exec ruby bin/pictor`
 
 * If you have installed Pictor as a RubyGem and have the `bin` directory on your `$PATH` you may simply call `$ pictor ...`
-* The repository also contains a `Procfile` suitable for running Pictor on [Heroku](http://heroku.com/)'s [Cedar](http://devcenter.heroku.com/articles/cedar) stack.
+* The repository also contains a `Procfile` suitable for running Pictor on [Heroku](http://heroku.com/)'s [Cedar](http://devcenter.heroku.com/articles/cedar) stack. Set your ENV using `$ heroku config:add KEY=VALUE` and then `$ heroku scale worker=1`.
 
 ## Contributing to Pictor
  
