@@ -5,6 +5,8 @@ gem "em-http-request"
 gem "yajl-ruby"
 gem "activesupport"
 
-gem "bundler", "~> 1.0.0", :require => false
-gem "jeweler", "~> 1.5.2", :require => false
-gem "rcov", ">= 0", :require => false
+group :development do
+  gem "bundler", "~> 1.0.0"
+  gem "jeweler", "~> 1.5.2"
+  gem "rcov", ">= 0"
+end
